@@ -15,7 +15,7 @@
   "dependencies": {
     "@reach/router": "1.2.1",
     "copy-webpack-plugin": "4.5.2",
-    "kremling": "1.0.4",
+    "kremling": "^2.0.1",
     "react-router": "4.3.1",
     "single-spa-react": "2.8.1"
   },
@@ -31,7 +31,7 @@
     "babel-loader": "8.0.0",
     "clean-webpack-plugin": "0.1.19",
     "css-loader": "1.0.0",
-    "kremling-loader": "0.1.1",
+    "kremling-loader": "^1.0.2",
     "postcss-loader": "3.0.0",
     "style-loader": "0.23.0",
     "webpack": "4.17.1",

@@ -16,7 +16,7 @@ export default class Root extends React.Component {
 
   render () {
     return (
-      <Scoped postcss={styles}>
+      <Scoped css={styles}>
         {
           this.state.hasError ? (
             <div className='root navBarHeight'>
