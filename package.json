@@ -1,20 +1,20 @@
 {
   "name": "navigation",
   "repository": "git@github.com:react-microfrontends/nav-bar.git",
-  "author": "Justin McMurdie <mcmurdiej@gmail.com>",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "echo \"Error: no lint specified\" && exit 1",
     "start": "webpack-dev-server --config ./webpack.dev.js --port 9001 --env.local=true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack.config.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@reach/router": "1.2.1",
+    "copy-webpack-plugin": "4.5.2",
     "kremling": "1.0.4",
     "react-router": "4.3.1",
     "single-spa-react": "2.8.1"
