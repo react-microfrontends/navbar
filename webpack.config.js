@@ -10,7 +10,7 @@ module.exports = {
     filename: 'navbar.js',
     library: 'navbar',
     libraryTarget: 'amd',
-    path: path.resolve(__dirname, 'build/navbar'),
+    path: path.resolve(__dirname, 'dist/navbar'),
   },
   mode: 'production',
   module: {
@@ -77,7 +77,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['build/navbar']),
+    new CleanWebpackPlugin(['dist/navbar']),
     CopyWebpackPlugin([
       {from: path.resolve(__dirname, 'src/navbar.js')}
     ]),
