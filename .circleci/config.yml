@@ -55,7 +55,7 @@ jobs:
           name: Deploy
           command: |
             echo "Going to correct directory"
-            cd /home/circleci/project/nav-bar
+            cd /home/circleci/project/
             ls dist
 
             echo "Creating google application credentials json file"
