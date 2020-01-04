@@ -1,5 +1,5 @@
 .root {
-  background-color: lightcoral;
+  background-color: var(--primary);
   display: flex;
   align-items: center;
 }
