@@ -20,17 +20,27 @@ export default class Root extends React.Component {
           <div className="root navBarHeight">Error</div>
         ) : (
           <div className="root navBarHeight">
-            {links.map(link => {
-              return (
-                <Link
-                  key={link.href}
-                  className="primary-navigation-link"
-                  to={link.href}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
+            <div>
+              {links.map(link => {
+                return (
+                  <Link
+                    key={link.href}
+                    className="primary-navigation-link"
+                    to={link.href}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </div>
+            <div>
+              <a
+                href="https://github.com/react-microfrontends"
+                className="externalLink"
+              >
+                Github project
+              </a>
+            </div>
           </div>
         )}
       </Scoped>
