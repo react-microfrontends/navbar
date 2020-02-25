@@ -34,7 +34,7 @@ yarn install
 yarn start --https --port 9001
 ```
 
-Go to https://localhost:9001/react-mf-navbar.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
+Note that you may use whichever port you would like to. Go to https://localhost:9001/react-mf-navbar.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
 
 Now, go to https://react.microfrontends.app. In the browser console, run the following:
 
