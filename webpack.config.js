@@ -10,6 +10,7 @@ module.exports = webpackConfigEnv => {
   });
 
   return webpackMerge.smart(defaultConfig, {
+    externals: ["moment"],
     module: {
       rules: [
         {

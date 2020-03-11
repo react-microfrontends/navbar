@@ -3,6 +3,7 @@ import { Scoped } from "kremling";
 import styles from "./root.krem.css";
 import { links } from "./root.helper.js";
 import { Link } from "@reach/router";
+import moment from "moment";
 
 export default class Root extends React.Component {
   state = {
@@ -41,6 +42,7 @@ export default class Root extends React.Component {
                 Github project
               </a>
             </div>
+            <div>today is {moment().format("yyyy mm dd")}</div>
           </div>
         )}
       </Scoped>
