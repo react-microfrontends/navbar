@@ -7,9 +7,28 @@ import Root from "./root.component";
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,
-  rootComponent: Root
+  rootComponent: Root,
+  domElementGetter
 });
 
-export const bootstrap = lifecycles.bootstrap;
-export const mount = lifecycles.mount;
+export const bootstrap = [lifecycles.bootstrap];
+export const mount = [
+  () =>
+    new Promise(res => {
+      setTimeout(() => {
+        res();
+      }, 500);
+    }),
+  lifecycles.mount
+];
 export const unmount = lifecycles.unmount;
+
+function domElementGetter() {
+  let el = document.getElementById("navbar");
+  if (!el) {
+    el = document.createElement("nav");
+    el.id = "navbar";
+    document.body.appendChild(el);
+  }
+  return el;
+}
