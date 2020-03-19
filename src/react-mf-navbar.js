@@ -25,3 +25,12 @@ function domElementGetter() {
   }
   return el;
 }
+
+export const devtools = {
+  overlays: {
+    selectors: [".root.navBarHeight"],
+    options: {
+      color: "red"
+    }
+  }
+};
