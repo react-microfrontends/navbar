@@ -20,6 +20,7 @@ function domElementGetter() {
   if (!el) {
     el = document.createElement("nav");
     el.id = "navbar";
+    el.className = "topnav";
     document.body.appendChild(el);
   }
   return el;
