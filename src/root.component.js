@@ -82,12 +82,20 @@ function setRebelTheme() {
     "var(--rebel-green)"
   );
   document.documentElement.style.setProperty(
+    "--color-danger",
+    "var(--imperial-primary)"
+  );
+  document.documentElement.style.setProperty(
     "--color-warning",
     "var(--rebel-yellow)"
   );
   document.documentElement.style.setProperty(
     "--color-info",
     "var(--rebel-blue)"
+  );
+  document.documentElement.style.setProperty(
+    "--background",
+    "var(--rebel-white)"
   );
 }
 
@@ -105,6 +113,10 @@ function setImperialTheme() {
     "var(--imperial-white)"
   );
   document.documentElement.style.setProperty(
+    "--color-danger",
+    "var(--rebel-primary)"
+  );
+  document.documentElement.style.setProperty(
     "--color-success",
     "var(--imperial-green)"
   );
@@ -115,5 +127,9 @@ function setImperialTheme() {
   document.documentElement.style.setProperty(
     "--color-info",
     "var(--imperial-blue)"
+  );
+  document.documentElement.style.setProperty(
+    "--background",
+    "var(--imperial-black)"
   );
 }
