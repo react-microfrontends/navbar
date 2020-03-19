@@ -12,15 +12,7 @@ const lifecycles = singleSpaReact({
 });
 
 export const bootstrap = [lifecycles.bootstrap];
-export const mount = [
-  () =>
-    new Promise(res => {
-      setTimeout(() => {
-        res();
-      }, 500);
-    }),
-  lifecycles.mount
-];
+export const mount = [lifecycles.mount];
 export const unmount = lifecycles.unmount;
 
 function domElementGetter() {
