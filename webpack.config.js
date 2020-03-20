@@ -10,26 +10,6 @@ module.exports = webpackConfigEnv => {
   });
 
   return webpackMerge.smart(defaultConfig, {
-    module: {
-      rules: [
-        {
-          test: /\.krem.css$/,
-          exclude: [path.resolve(__dirname, "node_modules")],
-          use: [
-            {
-              loader: "kremling-loader",
-              options: {
-                namespace: "navbar",
-                postcss: {
-                  plugins: {
-                    autoprefixer: {}
-                  }
-                }
-              }
-            }
-          ]
-        }
-      ]
-    }
+    // customizations can go here
   });
 };
