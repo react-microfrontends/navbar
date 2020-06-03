@@ -14,24 +14,12 @@ const lifecycles = singleSpaReact({
         Error
       </div>
     );
-  },
-  domElementGetter
+  }
 });
 
 export const bootstrap = lifecycles.bootstrap;
 export const mount = lifecycles.mount;
 export const unmount = lifecycles.unmount;
-
-function domElementGetter() {
-  let el = document.getElementById("navbar");
-  if (!el) {
-    el = document.createElement("nav");
-    el.id = "navbar";
-    el.className = "topnav";
-    document.body.appendChild(el);
-  }
-  return el;
-}
 
 export const devtools = {
   overlays: {
