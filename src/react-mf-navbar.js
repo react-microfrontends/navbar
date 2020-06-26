@@ -14,7 +14,7 @@ const lifecycles = singleSpaReact({
         Error
       </div>
     );
-  }
+  },
 });
 
 export const bootstrap = lifecycles.bootstrap;
