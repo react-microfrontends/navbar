@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Install
-          command: yarn install --frozen-lockfile
+          command: pnpm ci
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - node_modules
   build:
@@ -20,11 +20,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Build
           command: |
-            yarn build
+            pnpm build
             ls dist
       - save_cache:
           key: build-output-{{ .Environment.CIRCLE_SHA1 }}
@@ -39,10 +39,10 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Test and Lint
-          command: yarn lint
+          command: pnpm lint
   deploy:
     docker:
       - image: google/cloud-sdk
