@@ -58,8 +58,8 @@ Run the root-config project locally:
 
 ```
 cd root-config
-yarn install
-yarn start
+pnpm install
+pnpm start
 ```
 
 Now follow the steps above for "One module at a time" for each of the modules you wish to work on.
