@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint src",
     "start": "webpack serve",
+    "start:standalone": "webpack serve --env standalone",
     "test": "jest --passWithNoTests",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
