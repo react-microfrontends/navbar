@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Build
           command: |
-            pnpm build
+            pnpm run build
             ls dist
       - save_cache:
           key: build-output-{{ .Environment.CIRCLE_SHA1 }}
@@ -42,7 +42,7 @@ jobs:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Test and Lint
-          command: pnpm lint
+          command: pnpm run lint
   deploy:
     docker:
       - image: google/cloud-sdk
