@@ -11,7 +11,7 @@
     "start": "webpack serve",
     "test": "jest --passWithNoTests",
     "build": "webpack --mode=production",
-    "analyze": "webpack --mode=production --env.analyze true",
+    "analyze": "webpack --mode=production --env analyze",
     "format": "prettier --write .",
     "watch-tests": "jest --watch",
     "coverage": "jest --coverage --passWithNoTests"
