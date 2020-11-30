@@ -9,7 +9,7 @@ jobs:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Install
-          command: pnpm ci
+          command: pnpm install
       - save_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
           paths:
