@@ -1,6 +1,7 @@
-const webpackMerge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
 const path = require("path");
+const SystemJSPublicPathPlugin = require("systemjs-webpack-interop/SystemJSPublicPathWebpackPlugin");
 
 module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
@@ -9,12 +10,8 @@ module.exports = (webpackConfigEnv) => {
     webpackConfigEnv,
   });
 
-  return webpackMerge.smart(defaultConfig, {
+  return merge(defaultConfig, {
     // customizations can go here
-    devServer: {
-      client: {
-        port: 9001,
-      },
-    },
+    plugins: [new SystemJSPublicPathPlugin()],
   });
 };
