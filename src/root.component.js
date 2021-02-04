@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 
 export default function Root(props) {
   return (
-    <div className="h-16 flex items-center justify-between px-6 bg-primary text-white">
+    <nav className="h-16 flex items-center justify-between px-6 bg-primary text-white">
       <div className="flex items-center justify-between">
         {links.map((link) => {
           return (
@@ -22,6 +22,6 @@ export default function Root(props) {
           Github project
         </a>
       </div>
-    </div>
+    </nav>
   );
 }

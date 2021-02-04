@@ -2,8 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
 import Root from "./root.component";
+import singleSpaCss from "single-spa-css";
+import "./hi.css";
 
-const lifecycles = singleSpaReact({
+const cssLifecyles = singleSpaCss({
+  cssUrls: [],
+  webpackExtractedCss: true,
+});
+
+const reactLifecycles = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: Root,
@@ -16,6 +23,6 @@ const lifecycles = singleSpaReact({
   },
 });
 
-export const bootstrap = lifecycles.bootstrap;
-export const mount = lifecycles.mount;
-export const unmount = lifecycles.unmount;
+export const bootstrap = [cssLifecyles.bootstrap, reactLifecycles.bootstrap];
+export const mount = [cssLifecyles.mount, reactLifecycles.mount];
+export const unmount = [reactLifecycles.unmount, cssLifecyles.unmount];
