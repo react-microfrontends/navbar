@@ -13,6 +13,7 @@
     "test": "jest --passWithNoTests",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
+    "check-format": "prettier --check .",
     "format": "prettier --write .",
     "watch-tests": "jest --watch",
     "coverage": "jest --coverage --passWithNoTests"
@@ -63,5 +64,6 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged && concurrently pnpm:test pnpm:lint"
     }
-  }
+  },
+  "packageManager": "pnpm@9.11.0"
 }
